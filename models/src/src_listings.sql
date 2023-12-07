@@ -1,4 +1,8 @@
--- import raw_listings
+{{
+    config(
+    materialized ='ephemeral'
+    )
+}}
 WITH raw_listings AS (
         SELECT * FROM AIRBNB.RAW.RAW_LISTINGS
 )
